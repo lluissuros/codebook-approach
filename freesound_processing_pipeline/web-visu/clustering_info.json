@@ -1,0 +1,5 @@
+{
+    "datasets": ["civilization vs nature-local_codebook-64", "civilization vs nature-local_codebook-128", "civilization vs nature-local_codebook-256", "civilization vs nature-local_codebook-512", "civilization vs nature-local_codebook-1024", "civilization vs nature-local_codebook-2048", "civilization vs nature-mean"], "features": ["audioset"],
+    "datasets_audioset_changeNameIfYouWantToUseIt":  {"datasets": ["civilization vs nature-local_codebook-64", "civilization vs nature-local_codebook-128", "civilization vs nature-local_codebook-256", "civilization vs nature-local_codebook-512", "civilization vs nature-local_codebook-1024", "civilization vs nature-local_codebook-2048", "civilization vs nature-mean"], "features": ["audioset"]},
+    "datasets_mfcc_changeNameIfYouWantToUseIt":  {"datasets": ["civilization vs nature-local_codebook-64", "civilization vs nature-local_codebook-128", "civilization vs nature-local_codebook-256", "civilization vs nature-local_codebook-512", "civilization vs nature-local_codebook-1024", "civilization vs nature-local_codebook-2048", "civilization vs nature-mean"], "features": ["mfcc"]}
+}
