@@ -1,13 +1,16 @@
-# Freesound Graph Clustering
+# Clustering of multiple-event online soundcollections with the codebook approach
+This is the accompanying codebase to my Master Thesis in SMC
 
-Freesound Graph Clustering is a repository hosting some code for evaluating different features for the unsupervised classification (clustering) of audio content from [Freesound](https://freesound.org/).
-The clustering performance is evaluated on different datasets using an external cluster validation, which consists in comparing the results of a clustering to an externally known result (provided ground truth labels). The data has been collected within the [Freesound Annotator](https://annotator.freesound.org/) platform, which hosts the [FSD](https://annotator.freesound.org/fsd/explore/) dataset containing sounds organised following the [AudioSet Ontology](https://research.google.com/audioset/ontology/index.html).
 
-The clustering method consists on partitioning a k-nearest neighbors graph.
+## freesound_processing_pipeline folder
+
+Given a dataset of feature vectors series, the codebook will be generated. This codebook will be used to encode the feature vectors, so each frame will be encoded as its nearest codeword in the feature space. This encoded vector can be treated analogous to a text, where each codeword is analog to a natural language word. In our particular processing pipeline, TF-IDF is performed in order to reward less common codewords. Since the output of TF-IDF is a fixed-sized vector, a similarity matrix can be computed. This similarity matrix is used by the clustering algorithm to finally obtain the clusters. 
+
+The presented code is modular enough to allow the use of different NLP algorithms in order to produce alternative similarity matrices. For example, histogram intersection was used in a previous iteration instead of TF-IDF. Different clustering techniques are also easy to plug-in (as an example, k-means was previously used in an earlier iteration before switching to k-nn graph-based clustering which proved to be much more faster and easier to render in the web browser).
+
 In this graph, each node corresponds to a Freesound clip.
-Edges between nodes reflect a notion of content-based similarity calculated on a feature space, for instance, using the [AudioSet](https://research.google.com/audioset/) embeddings.
-Clusters in the graph are identified using a Louvain community detection algorithm [implementation](https://github.com/taynaud/python-louvain/tree/networkx2) with the [NetworkX](https://networkx.github.io/) Python package.
 
+Clusters in the graph are identified using a Louvain community detection algorithm [implementation](https://github.com/taynaud/python-louvain/tree/networkx2) with the [NetworkX](https://networkx.github.io/) Python package.
 
 Setup
 -------------------
