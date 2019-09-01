@@ -1,6 +1,9 @@
 # Clustering of multiple-event online sound collections with the codebook approach
 This is the accompanying codebase to my Master Thesis in SMC
 
+## Custom dataset: acoustic scenes
+https://drive.google.com/open?id=1LzMi7FHU5lUZxLiCl1jefBxIBVZG8xGv6mx4czmhm6Y
+
 
 ## freesound_processing_pipeline folder
 
