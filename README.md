@@ -1,4 +1,4 @@
-# Clustering of multiple-event online soundcollections with the codebook approach
+# Clustering of multiple-event online sound collections with the codebook approach
 This is the accompanying codebase to my Master Thesis in SMC
 
 
